@@ -11,16 +11,16 @@ class Display(ABC):
 
 
 class ConsoleDisplay(Display):
-    def __init__(self, book: Book):
+    def __init__(self, book: Book) -> None:
         self.book = book
 
-    def display(self):
+    def display(self) -> None:
         print(self.book.content)
 
 
 class ReverseDisplay(Display):
-    def __init__(self, book: Book):
+    def __init__(self, book: Book) -> None:
         self.book = book
 
-    def display(self):
+    def display(self) -> None:
         print(self.book.content[::-1])
